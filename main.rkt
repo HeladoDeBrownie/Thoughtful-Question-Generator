@@ -2,11 +2,15 @@
 (require
   jen
   "favorite.rkt"
-  "pet.rkt")
+  "fixed.rkt"
+  "pet.rkt"
+  "superpower.rkt")
 
 (define-rule start
-  (~> (favorite:start))
-  (~> (pet:start)))
+  (~> (favorite:start))   #:weight 2
+  (~> (pet:start))        #:weight 2
+  (~> (superpower:start)) #:weight 2
+  (~> (fixed:start))      #:weight 1)
 
 (module+ main
   (with-handlers
