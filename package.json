@@ -1,0 +1,18 @@
+{
+  "name": "thoughtful-question-generator",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeladoDeBrownie/Thoughtful-Question-Generator.git"
+  },
+  "author": "helado de brownie",
+  "bugs": {
+    "url": "https://github.com/HeladoDeBrownie/Thoughtful-Question-Generator/issues"
+  },
+  "homepage": "https://github.com/HeladoDeBrownie/Thoughtful-Question-Generator#readme",
+  "dependencies": {
+    "jen.js": "github:HeladoDeBrownie/jen.js#492b95d57c3200e8fdb1cbf5babf45dbc6deed67"
+  }
+}
