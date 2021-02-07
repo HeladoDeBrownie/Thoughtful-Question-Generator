@@ -1,12 +1,16 @@
 const {Rule, Clause} = require('jen.js')
 const {start: favoriteStart} = require('./favorite')
-const {start: fixedStart} = require('./fixed')
 const {start: petStart} = require('./pet')
+const {start: superpowerStart} = require('./superpower')
+const {start: fixedStart} = require('./fixed')
 
 const start = new Rule(
-    new Clause(() => favoriteStart  .evaluate()),
-    new Clause(() => fixedStart     .evaluate()),
-    new Clause(() => petStart       .evaluate()),
+    new Clause(() => favoriteStart      .evaluate(), {weight: 3}),
+    new Clause(() => petStart           .evaluate(), {weight: 3}),
+    new Clause(() => superpowerStart    .evaluate(), {weight: 3}),
+    new Clause(() => fixedStart         .evaluate(), {weight: 1}),
 )
 
-console.log(start.evaluate())
+module.exports = {
+    start,
+}
