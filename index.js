@@ -5,9 +5,9 @@ const {start: superpowerStart} = require('./superpower')
 const {start: fixedStart} = require('./fixed')
 
 const start = new Rule(
-    new Clause(() => favoriteStart      .evaluate(), {weight: 3}),
-    new Clause(() => petStart           .evaluate(), {weight: 3}),
-    new Clause(() => superpowerStart    .evaluate(), {weight: 3}),
+    new Clause(() => favoriteStart      .evaluate(), {weight: 4}),
+    new Clause(() => petStart           .evaluate(), {weight: 4}),
+    new Clause(() => superpowerStart    .evaluate(), {weight: 4}),
     new Clause(() => fixedStart         .evaluate(), {weight: 1}),
 )
 
